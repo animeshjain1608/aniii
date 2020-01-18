@@ -1,0 +1,35 @@
+
+{% extends "base.html" %}
+
+{% block content %}
+    {{block.super}}
+    <div class="col-sm-6 col-sm-offset-3">
+        {% if obj.image %}
+            <img src="{{ obj.image.url }}" class="img-responsive"/>
+        {% endif %}
+        {{obj.title}}
+        {{obj.content | linebreaks}}
+        {{obj.updated}}
+        {{obj.id}}
+    </div>
+{% endblock content %}
+
+
+<!-- <html>
+<head>
+    <title>Document</title>
+</head>
+<body>
+    {% if messages %}
+        <ul>
+            {% for msg in messages %}
+                <li {% if msg.tags %} class="{{msg.tags}}" {% endif %}>{{msg}}</li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+    {{obj.title}}
+    {{obj.content}}
+    {{obj.updated}}
+    {{obj.id}}
+</body>
+</html> -->

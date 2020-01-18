@@ -1,0 +1,4 @@
+Django
+gunicorn
+django-heroku
+Pillow==6.2.2
