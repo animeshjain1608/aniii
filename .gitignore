@@ -1,5 +1,5 @@
 venv
 *.pyc
-staticfiles
 getting-started/*
 .env
+staticfiles
